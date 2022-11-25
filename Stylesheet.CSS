@@ -1,0 +1,252 @@
+/*Form Stuff*/ 
+
+
+
+
+/* Elements */
+
+body 
+{
+	background-image: url("Pics/Background-4.jpg");
+
+	/*backdrop-filter: blur(10px) */
+
+}
+
+body p,ul,li
+{
+	color:white;  
+	
+}
+
+h1
+{
+	text-align:center;
+	font-weight:bold;
+	font-size:50px !important;
+	background-image: linear-gradient(45deg, #6B67C3 , #E0B916  );
+	-webkit-background-clip: text ;
+	-webkit-text-fill-color: transparent ;
+	
+	
+}
+h2 
+{
+	font-size:20px;
+	font-weight:bold;
+	color: white; 
+	
+}
+iframe 
+{
+		width: 40%;
+		Height: 300px;
+		overflow: auto;
+		display:block; 
+		margin:auto ;
+		Padding-bottom:10px;
+}
+
+.Form-Div 
+{
+	font-size:20;
+	font-weight:bold;
+	text-align:center;
+	color: white; 
+}
+
+label
+{
+	display:inline-block;
+	margin-left:0.2cm;
+	width:35%;
+	float:left; 
+}
+
+/* Topics stuff */
+.Topic-Image 
+{
+	display: block;
+	float:right; 
+	border-radius: 10%; 
+	width: 30%;
+	Height: auto; 
+	border-style:solid;
+	border-width: 2px;
+	border-color:transparent;
+	padding-bottom:10px;
+}
+
+
+.Content-Div
+{
+	background-image: url("Pics/Blue-Hex-Background.jpg");
+	margin:auto;
+	height:70%;
+	width: 70%; 
+	border-style:solid;
+	border-width: 5px;
+	border-color:black;
+	border-radius: 5%;
+}
+
+.Content-Div-Form-Varient
+{
+	background-image: url("Pics/Blue-Hex-Background.jpg");
+	margin:auto;
+	height:40%;
+	width: 30%; 
+	border-style:solid;
+	border-width: 5px;
+	border-color:black;
+	border-radius: 5%;
+}
+
+.Button-Div
+{
+	text-align:center;
+	
+}
+
+
+/*Navigation bar stuff  */
+.Nav-Layer1
+{
+	overflow:hidden;
+}
+.Nav-Layer1 a 
+{
+color:#827FB0 ;
+text-decoration:none;
+display: inline;
+padding: 22px 24px;
+font-weight:bold;
+font-size:16px
+text-align: center;
+}
+.Normal-li a:hover
+{
+background-color:#929292;	
+}
+.Normal-li
+{
+float:right;
+background
+/*
+display: inline;
+float:right;
+background-color:red;
+padding: 14px 16px;
+*/
+}
+.Normal-ul
+{
+list-style-type:none;
+Overflow:hidden;
+/*background-image:linear-gradient(to top right,black,white); */
+background-color: #333;
+margin:0;
+padding:0;
+}
+.Topic
+{
+Overflow:hidden;	
+}
+.Topic .Sub-Menu-Button
+{
+
+font-size: inherit;
+border: none;
+outline: none;
+color: #827FB0 ;
+background-color: inherit;
+font-family: inherit;
+font-weight:bold;
+}
+.Topic:hover .Sub-Menu-Button 
+{
+background:#929292;	
+} 
+.Topic .Sub-Menu-Content li:hover
+{
+background:#333;	
+}
+.Sub-Menu-Content
+{
+display:none;
+position: absolute; 
+left:0;
+background-color:#333;
+width:100%;
+z-index:1;
+}
+.Sub-Menu-Content a
+{
+
+float: left;
+color:#827FB0 ; 
+text-decoration:none;	
+}
+.Sub-Menu-Content a:hover
+{
+background-color:#929292;
+color:black;
+}
+.Topic:hover .Sub-Menu-Content
+{
+Display:block;
+}
+
+
+/* Topics stuff */
+
+/*Gallery Stuff  */
+/*.Test1
+{
+		float:center;
+	padding: 40px,30px; 
+}
+*/
+
+.Gallery-Area
+{
+	background-image: url("Pics/Blue-Hex-Background.jpg");
+	margin:auto;
+	display:flex;
+	flex-wrap:wrap;
+	height:65%;
+	width: 65%; 
+	border-style:solid;
+	border-width: 5px;
+	border-color:black;
+	border-radius: 2%;
+}
+.Row
+{
+	flex: 10%;
+	max-width: 40%;
+	/*	padding:0 4px;*/
+} 
+
+.Gallery-Pics
+{
+	/*margin-top: 8px;*/
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 10%;
+	
+}
+/*Help*/
+
+.Help-Div
+{
+	display:flex;
+	width:50%;
+	margin:auto;
+	float:left;
+}
+
+
+
+
+
