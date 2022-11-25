@@ -80,7 +80,7 @@ label
 
 .Content-Div
 {
-	background-image: url("Pics/Blue-Hex-Background.JPG") !important;
+	background-image: url("Pics/Blue-Hex-Background.jpg")!important;
 	margin:auto;
 	height:70%;
 	width: 70%; 
@@ -92,7 +92,7 @@ label
 
 .Content-Div-Form-Varient
 {
-	background-image: url("Pics/Blue-Hex-Background.JPG") !important;
+	background-image: url("Pics/Blue-Hex-Background.jpg")!important;
 	margin:auto;
 	height:40%;
 	width: 30%; 
