@@ -11,10 +11,22 @@ html, body
 	/*background-color: black; */
 	height: 100% !important;
 	width: 100%;
+	
+	
+	
+	
+	/* 	
+		fix scroll on main screen 
+		reduce width 95%  
+		margin left 3%
+	*/
+	
 	/*The main div is a child of these parts I thought they automaticly applied size to these.
 	Anyway to properly allow div height to changed change these 100% or give these some pixel value that you want 
 	as the div is relative to the size of the parent (If using percentage) otherwise use pivel value
-	(Hard to adapt size wise for small devices)  	*/	
+	(Hard to adapt size wise for small devices) 
+ 	*/
+	
 }
 
 /*Partional Border Link https://unused-css.com/blog/css-partial-borders/ */
@@ -95,17 +107,20 @@ clip-path: polygon(100% 0, 90% 3%, 2% 3%, 2% 91%, 0 100%, 0 0);
 
 /*Link for trapezoid button shape https://stackoverflow.com/questions/46767997/how-can-i-create-a-slanted-trapezoid-like-navigation-bar 
 https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
+
+
 .Navigation-Bar
-{	top: 0%;
-	right: 35%;
-	width: 34%;
-	height: 8%;
+{	top: 1%;
+	right: 32%;
+	width: 33%;
+	height: 6%;
 	position: absolute;
-	border: 2px solid black; 
+	/*border: 2px solid #d1d1d1; */
 	/*New */
 	display:flex;
 	justify-content: center;
 	align-items: center;
+
 }
 .Navigation-Bar ul
 {
@@ -123,9 +138,25 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 {
 	/*float: left;*/
 	display: inherit;
-	width: 33.33%;
+	width: 28%; 
 	height: 100% !important;
-	border-right: 1px solid black;
+	
+	/*border-right: 1px solid  #d1d1d1; */
+	
+	/*New*/
+	border-bottom: 7px solid transparent;
+    border-image: linear-gradient(to right, gold, purple);
+	border-image-slice:1;
+	padding-right: 3px; 
+	margin-right: 5% !important; 
+	
+	/*solid clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
+	/*clip-path: polygon(27% 0, 72% 0, 100% 100%, 0% 100%); */ 
+	
+	/*clip-path: polygon(51% 0, 53% 0, 100% 100%, 0% 100%); */
+	clip-path: polygon(34% 0, 66% 0, 90% 100%, 9% 100%);
+	
+	
 }
 .Navigation-Bar li a 
 {
@@ -133,7 +164,7 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 	height: 100%;
 	text-decoration: none; 
 	/*text-align: center; display: block;*/ 	
-	color: black;
+	color: #d1d1d1;
 	/*New*/
 	display:inherit;
 	justify-content: center;
@@ -230,7 +261,6 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 
 .Project-Images
 {
-		border: 1px solid black; 
 		height: 80%;
 		width: 100%;
 }
@@ -238,13 +268,28 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 .Project-item-inrow
 {
 		margin: auto;
-		border: 3px solid black; 
+		/*border: 3px solid black; */
 		height: 46% ;
 		width: 36%;
 }
+
+
 .Project-item-inrow p 
 {
+	padding: 4px;
+	border-top: 2px solid #d1d1d1; 
 	text-align: center; 
+}
+
+
+.Project-item-inrow-empty
+{
+	color: #d1d1d1;
+	text-decoration: none;
+	text-align: center; 
+	margin: auto; 
+	height: 46% ;
+	width: 36%;
 }
 
 
@@ -325,8 +370,8 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 {
 	position: absolute;
 	height: 35%;
-	width: 38%;
-	right: 5%;
+	width: 35%;
+	right: -3%;
 	bottom: 30%;
 	z-index: 3; 
 	/*border: 3px solid black; */ 
@@ -366,14 +411,13 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 {
 	text-align: left;
 	text-decoration: none; 
-	color: red;
+	color: #d1d1d1;
 }
 .projects 
 {
 	padding-top: 5px;
 	width: 50%;
 	height: 100%;
-
 }
 
 .projects::before, 
@@ -473,11 +517,18 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 	}
 	.Navigation-Bar
 	{
-		top: 5%;
+		top: 12%;
 		right: 7%;
 		width: 80%;
 		height: 10%;
 	}
+	
+	.Navigation-Bar li
+	{
+	/*New*/
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	
 	
 	.Personal-Info
 	{
@@ -597,7 +648,7 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 	}
 	.Navigation-Bar
 	{
-		top: 5%;
+		top: 12%;
 		right: 7%;
 		width: 80%;
 		height: 10%;
