@@ -410,7 +410,6 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 
 .Border-Wrapper-Mini li 
 {
-	display:list-item;
 	font-size: 12px !important;
 	padding-top: 12px;
 	padding-bottom: 15px;
@@ -436,15 +435,6 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 	padding-top: 5px;
 	width: 50%;
 	height: 100%;
-}
-.projects ul 
-{
-	max-width: 200px;
-}
-.projects li 
-{
-	width:100%
-	
 }
 
 .projects::before, 
@@ -567,7 +557,7 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 	.Border-Wrapper-Mini
 	{
 		height: 30%;
-		width: 90%; 
+		width: 90%;
 		left: 8%;
 		bottom: 20%;
 	}
@@ -616,21 +606,7 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 		bottom: -15%;	
 		right: 18%;
 	}
-} 
-
-@media screen and (min-device-width: 320px) and (max-device-width: 580px)
-{
-	.Navigation-Bar 
-	{ 
-		position: fixed; 
-		top: 2%; 
-		left: 0; 
-		width: 100%; 
-		height: auto; 
-	}
-
-	
-} 
+}  
 
 /*Dumb pad responsive stuff*/
 
@@ -714,14 +690,6 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 		padding-top: 5%;
 		width: 70%;
 		height: 100%;
-	}
-	.Navigation-Bar 
-	{ 
-		position: fixed; 
-		top: 2%; 
-		left: 0; 
-		width: 100%; 
-		height: auto; 
 	}	
 	/* Border change */
 	.Content-main::before
@@ -735,12 +703,7 @@ https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
 		width: 55%; 
 		height: 25%;		
 	}
-	
-
 }
-
-
-
 
 
 
