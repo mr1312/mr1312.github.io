@@ -1,0 +1,762 @@
+
+
+/*Main Part wrapper*/
+
+html, body
+{
+	background: #1d1d20; 
+	color: #d1d1d1; 
+	
+	z-index: 3; 
+	/*background-color: black; */
+	height: 98% !important;
+	width: 98%;
+	
+	
+	
+	
+	/* 	
+		fix scroll on main screen 
+		reduce width 95%  
+		margin left 3%
+	*/
+	
+	/*The main div is a child of these parts I thought they automaticly applied size to these.
+	Anyway to properly allow div height to changed change these 100% or give these some pixel value that you want 
+	as the div is relative to the size of the parent (If using percentage) otherwise use pivel value
+	(Hard to adapt size wise for small devices) 
+ 	*/
+	
+}
+
+/*Partional Border Link https://unused-css.com/blog/css-partial-borders/ */
+
+/*Gradient border vid https://www.youtube.com/watch?v=RM3-IMRIEB4 
+https://stackoverflow.com/questions/67537257/how-do-half-circle-border-with-gradient-in-css
+This saved my ass noted for later use https://bennettfeely.com/clippy/ 
+
+*/
+.Content-main
+{
+	top: 8%;
+	position: relative; 
+	height: 82%;
+	width: 85%;
+	/*height: 600px !important; */
+	display: flex; 
+	margin: auto;
+	
+	/*new*/
+
+	
+}
+
+/*Partial Border*/
+.Content-main::before, 
+.Content-main::after
+{
+	position: absolute;
+	content: "";
+} 
+
+.Content-main::before
+{
+	width: 30%; 
+	height: 39%;
+	left:0;
+	top:0; 
+	
+	
+	/*New*/
+		
+	background: linear-gradient(white, white) padding-box, 
+				linear-gradient(90deg, gold, purple) border-box; 
+				
+	border-left: 10px solid transparent !important;
+	border-top: 10px solid transparent !important;
+	
+
+/* good enough clip-path: polygon(100% 0, 90% 3%, 2% 4%, 2% 91%, 0 100%, 0 0); */
+clip-path: polygon(100% 0, 90% 3%, 2% 3%, 2% 91%, 0 100%, 0 0);
+
+
+	
+}
+
+.Content-main::after
+{
+	width: 30%; 
+	height: 39%;
+	right:0; 
+	bottom:0;
+
+
+	z-index: 0;
+	background: linear-gradient(white, white) padding-box, 
+				linear-gradient(130deg, gold, purple) border-box; 
+
+	border-right: 13px solid transparent !important;
+	border-bottom: 13px solid transparent !important;
+	/* clip-path: polygon(100% 0, 98% 7%, 97% 96%, 8% 97%, 0 100%, 100% 100%); */
+	
+	clip-path: polygon(98% 8%, 100% 0, 100% 100%, 0 100%, 8% 97%, 98% 97%);
+	
+}
+
+/*  Navigation Bar  */
+
+/*Link for trapezoid button shape https://stackoverflow.com/questions/46767997/how-can-i-create-a-slanted-trapezoid-like-navigation-bar 
+https://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/ */
+
+
+.Navigation-Bar
+{	top: 1%;
+	right: 32%;
+	width: 33%;
+	height: 6%;
+	position: absolute;
+	/*border: 2px solid #d1d1d1; */
+	/*New */
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.Navigation-Bar ul
+{
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+	/*New*/
+	display: inherit;
+	
+}
+
+.Navigation-Bar li
+{
+	/*float: left;*/
+	display: inherit;
+	width: 28%; 
+	height: 100% !important;
+	
+	/*border-right: 1px solid  #d1d1d1; */
+	
+	/*New*/
+	border-bottom: 7px solid transparent;
+    border-image: linear-gradient(to right, gold, purple);
+	border-image-slice:1;
+	padding-right: 3px; 
+	margin-right: 5% !important; 
+	
+	/*solid clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
+	/*clip-path: polygon(27% 0, 72% 0, 100% 100%, 0% 100%); */ 
+	
+	/*clip-path: polygon(51% 0, 53% 0, 100% 100%, 0% 100%); */
+	clip-path: polygon(34% 0, 66% 0, 90% 100%, 9% 100%);
+}
+
+
+
+.Navigation-Bar li a 
+{
+	width: 100%;
+	height: 100%;
+	text-decoration: none; 
+	/*text-align: center; display: block;*/ 	
+	color: #d1d1d1;
+	/*New*/
+	display:inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+.Nav-link[aria-current="page"]
+{
+	/*border-bottom: 10px solid #1d1d20; */
+	border-top: 7px solid transparent;
+
+	border-image: linear-gradient(to right, gold, purple);
+	border-image-slice:1;
+}
+
+
+.Navigation-Bar a:hover
+{
+	font-size: 20px;
+}
+
+
+
+/*Main Children Items */
+
+/*Project page*/
+
+.Project-main 
+{
+	z-index: 3; 
+	position: relative;
+	top: 7%;
+	left: -7%;
+	margin:auto;
+	display:flex;
+	flex-wrap:wrap;
+	height:75%;
+	width: 45%; 
+	/* border-radius: 2%; */
+}
+/*Probs not work*/
+
+.Project-main::before, 
+.Project-main::after
+{
+
+	position: absolute;
+	content: "";
+} 
+
+.Project-main::before
+{
+	/*transform: rotate(90deg);*/
+	padding: 2px;
+	width: 30%; 
+	height: 30%;
+	right:-15%;
+	top:-6%;
+	
+	background: linear-gradient(white, white) padding-box, 
+				linear-gradient(130deg, gold, purple) border-box; 
+
+	border-right: 13px solid transparent !important;
+	border-top: 13px solid transparent !important;
+	
+	
+	clip-path: polygon(100% 100%, 95% 93%, 95% 6%, 11% 5%, 0 0, 100% 0);
+	/*
+	border-left: 3px solid black; 
+	border-top: 3px solid black; 
+	*/
+}
+
+.Project-main::after
+{
+	/*transform: rotate(90deg);*/
+	width: 30%; 
+	height: 30%;
+	left:-15%; 
+	bottom:-6%;
+	z-index: 1; 
+	
+	
+	background: linear-gradient(white, white) padding-box, 
+				linear-gradient(130deg, gold, purple) border-box; 
+
+	border-left: 13px solid transparent !important;
+	border-bottom: 13px solid transparent !important;
+	
+	/* solid clip-path: polygon(88% 97%, 100% 100%, 0 100%, 0 0, 3% 7%, 3% 98%); */
+	/* better clip-path: polygon(90% 96%, 100% 100%, 0 100%, 0 0, 4% 7%, 4% 96%); */
+	
+	clip-path: polygon(90% 95%, 100% 100%, 0 100%, 0 0, 4% 7%, 4% 95%);
+	
+	/*
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black; 
+	*/
+	
+}
+/* End */
+
+
+.Content-main h1 
+{
+	position: relative;
+	top:9%;
+	left: 42%;
+}
+
+.Project-Images
+{
+		height: 80%;
+		width: 100%;
+}
+
+.Project-item-inrow
+{
+		margin: auto;
+		/*border: 3px solid black; */
+		height: 46% ;
+		width: 36%;
+}
+
+
+.Project-item-inrow p 
+{
+	padding: 4px;
+	border-top: 2px solid #d1d1d1; 
+	text-align: center; 
+}
+
+
+.Project-item-inrow-empty
+{
+	color: #d1d1d1;
+	text-decoration: none;
+	text-align: center; 
+	margin: auto; 
+	height: 46% ;
+	width: 36%;
+}
+
+
+
+/* Project stuff ends*/
+.Content-main::before
+{
+	width: 30%; 
+	height: 39%;
+	left:0;
+	top:0;
+	border-left: 3px solid black; 
+	border-top: 3px solid black; 
+}
+
+.Content-main::after
+{
+	width: 30%; 
+	height: 39%;
+	right:0; 
+	bottom:0;
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black; 
+	
+}
+
+
+.Personal-Info
+{
+	padding: 7px,7px,7px,7px;
+	position: absolute;
+	height: 35%;
+	width: 45%;
+	left: 10%;
+	bottom: 32%;
+}
+.Personal-Info h1 
+{
+	font-weight: 400;
+	font-size: 68px;
+	padding-bottom: 10px;
+	position: relative;
+	left: 0%;	
+	text-align: left; 
+}
+
+.Personal-Info p
+{
+	position: relative;
+	padding: 7px;
+	
+	/*We'll see*/
+	 border-left: 4px solid;
+	border-image: linear-gradient(to bottom, gold, purple) 1 100%;
+
+} 
+
+
+.Icon-Image 
+{
+	padding: 10px;
+	position: relative;
+	height: 26px;
+	width: 26px;
+	
+}
+
+.Icon-area
+{
+	display: flex;
+	width:150px;
+	height: 40x;
+	position: absolute;
+	right: 7%;
+}
+
+.Border-Wrapper-Mini
+{
+	position: absolute;
+	height: 35%;
+	width: 35%;
+	right: -3%;
+	bottom: 30%;
+	z-index: 3; 
+	/*border: 3px solid black; */ 
+}
+
+.Border-Wrapper-Mini h2
+{
+	left: 0%;
+	font-weight: 400;
+}
+
+
+
+.Border-Wrapper-Mini ul
+{
+	list-style: none; 
+}
+
+
+.Border-Wrapper-Mini li 
+{
+	display:list-item;
+	font-size: 12px !important;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	float: left;
+	text-align: left;
+	
+	
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, gold, purple);
+  border-image-slice:1;
+  width: 100%: 
+	
+}
+
+.Border-Wrapper-Mini a 
+{
+	text-align: left;
+	text-decoration: none; 
+	color: #d1d1d1;
+}
+.projects 
+{
+	padding-top: 5px;
+	width: 50%;
+	height: 100%;
+}
+.projects ul 
+{
+	max-width: 200px;
+}
+.projects li 
+{
+	width:100%
+	
+}
+
+.projects::before, 
+.projects::after
+{
+	position: absolute; 
+	width: 20%;
+	height: 25%;
+	content: "";
+}
+
+.projects::before 
+{
+	left: 0;
+	top: -5;
+	
+	/*
+	border-left: 3px solid black; 
+	border-top: 3px solid black; 
+	*/
+	
+	background: linear-gradient(white, white) padding-box, 
+				linear-gradient(130deg, gold, purple) border-box; 
+
+	border-left: 13px solid transparent !important;
+	border-top: 13px solid transparent !important;
+	
+	/*clip-path: polygon(4% 4%, 4% 93%, 0 100%, 0 0, 100% 0, 92% 4%);*/
+	clip-path: polygon(4% 5%, 4% 93%, 0 100%, 0 0, 100% 0, 91% 5%);
+}
+
+/* Moble Responsive Design media queries*/
+
+
+
+
+/*Common Phone*/
+@media screen and ((min-width: 340) or (max-width: 695px)) /*For some reason if you change 340 to 340px it breaks
+															the normal desktop view*/
+{
+	/* Project stuff*/
+	.Content-main h1 
+	{
+		position: relative;
+		top:13%;
+		left: 28%;
+		
+	}
+	.Project-main 
+	{
+		position: absolute;
+		top: 31%;
+		left: 7%;
+		margin:auto;
+		display:flex;
+		flex-wrap:wrap;
+		height:60%;
+		width: 85%;  		
+	}
+	
+	.Project-main::before
+	{
+	right:-4%;
+	top:-10%;
+	}
+
+	.Project-main::after
+	{
+		left:-4%; 
+		bottom:-10%;	
+	}
+	
+	.Project-item-inrow p 
+	{
+		display: none; 
+	}
+	.Project-item-inrow 
+	{
+		height:40%;
+		width: 40%; 
+	}
+	
+	.Project-Images
+	{
+		height: 100%;
+		width: 100%;
+	}
+	
+	/* Project break */
+	
+	.Icon-area
+	{
+		right: 18%;
+		bottom: -10%;
+	}
+	.Navigation-Bar
+	{
+		top: 11%;
+		right: 7%;
+		width: 80%;
+		height: 10%;
+	}
+	
+	.Navigation-Bar li
+	{
+	/*New*/
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	
+	
+	.Personal-Info
+	{
+		overflow: auto;
+		height: 35%;
+		width: 85%;
+		left: 12%;
+		top: 20%;
+	}
+	
+	.Border-Wrapper-Mini
+	{
+		height: 30%;
+		width: 90%; 
+		left: 8%;
+		bottom: 20%;
+	}
+	
+	.Border-Wrapper-Mini h2 
+	{
+		padding-top: 20px; 
+		
+	}
+
+	.Border-Wrapper-Mini li 
+	{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.projects
+	{
+		padding-top: 5%;
+		width: 100%;
+		height: 100%;
+	}	
+	/* Border change */
+	.Content-main::before
+	{
+		width: 55%; 
+		height: 25%;
+	}
+
+	.Content-main::after
+	{
+		width: 55%; 
+		height: 25%;		
+	}
+	
+	.Personal-Info h1 
+	{
+		font-size:28px;	
+	}
+}  
+
+/*Small Boi  */
+@media screen and (max-width: 290px)
+{ /* Galaxy fold */ 
+	.Icon-area
+	{
+		bottom: -15%;	
+		right: 18%;
+	}
+} 
+
+@media screen and (min-device-width: 320px) and (max-device-width: 580px)
+{
+	.Navigation-Bar 
+	{ 
+		position: fixed; 
+		top: 2%; 
+		left: 0; 
+		width: 100%; 
+		height: auto; 
+	}
+
+	
+} 
+
+/*Dumb pad responsive stuff*/
+
+@media screen and (min-device-width: 700px)and (max-device-width: 930px) 
+{
+	.Content-main h1 
+	{
+		top:15%;
+	}
+	
+	.Personal-Info h1 
+	{
+		font-size:48px;	
+	}
+	.Border-Wrapper-Mini
+	{
+		font-size: 28px;
+	}
+	
+	.Project-main 
+	{
+		position: absolute;
+		top: 24%;
+		left: 7%;
+		margin:auto;
+		display:flex;
+		flex-wrap:wrap;
+		height:70%;
+		width: 85%; 	
+	}
+	
+	.Project-main::before
+	{
+	right:-7%;
+	top:-10%;
+	}
+
+	.Project-main::after
+	{
+		left:-7%; 
+		bottom:-9%;	
+	}
+	.Project-item-inrow 
+	{
+		height:40%;
+		width: 40%; 
+	}
+
+	.Icon-area
+	{
+		right: 35%;
+		bottom: -10%;
+	}
+	.Navigation-Bar
+	{
+		top: 10%;
+		right: 7%;
+		width: 80%;
+		height: 10%;
+	}
+	
+	
+	.Personal-Info
+	{
+		overflow: auto; 
+		height: 35%;
+		width: 85%;
+		left: 12%;
+		top: 20%;
+	}
+	
+	.Border-Wrapper-Mini
+	{
+		height: 30%;
+		width: 90%;
+		left: 28%;
+		bottom: 20%;
+	}
+	.projects
+	{
+		padding-top: 5%;
+		width: 70%;
+		height: 100%;
+	}
+	.Navigation-Bar 
+	{ 
+		position: fixed; 
+		top: 2%; 
+		left: 0; 
+		width: 100%; 
+		height: auto; 
+	}	
+	/* Border change */
+	.Content-main::before
+	{
+		width: 55%; 
+		height: 25%;
+	}
+
+	.Content-main::after
+	{
+		width: 55%; 
+		height: 25%;		
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
